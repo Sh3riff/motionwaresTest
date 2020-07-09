@@ -1,0 +1,1 @@
+A clone of "https://www.thehouseofyoga.com/" using React. A test on https://pro.motionwares.com
