@@ -1,6 +1,6 @@
 import React from 'react';
 import GlobalStyles from './styledComponents/GlobalStyles';
-import { Header, MainBanner, MainBody } from './components'
+import { Header, MainBanner, MainBody, SectionOne, SubSectionOne } from './components'
 
 const App = () => {
     return (
@@ -9,7 +9,9 @@ const App = () => {
         <Header />
         <MainBanner />
         <MainBody />
-        <h1 style={ {margin: "50px 0", textAlign: "center", color: "red"} }>Work in Progress, please check back... </h1>
+        <SectionOne />
+        <SubSectionOne />
+        <h1 style={ {margin: "50px 0", textAlign: "center", color: "red"} }>Work in Progress, Kindly check back... </h1>
         </>
     )
 }

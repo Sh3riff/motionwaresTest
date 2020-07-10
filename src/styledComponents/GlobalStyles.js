@@ -305,3 +305,109 @@ export const BodyX = styled.main`
         }
     }
 `;
+
+export const Board = styled.div`
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 520px;
+    @media (min-width: 740px){
+        height: 550px;
+    }
+    .texty{
+        height: 100%;
+        width: 100vw;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        color: white;
+        font-weight: normal;
+        h1{
+            font-size: calc(.85 * (1.5rem + ((1vw - 3.2px) * 3)));
+            margin-bottom: 3vh;
+            text-align: center;
+        }
+        h3{
+            font-size: calc(.4 * (1.5rem + ((1vw - 3.2px) * 3)));
+            line-height: calc(.6 * (1.5rem + ((1vw - 3.2px) * 3)));
+            margin-bottom: 3vh;
+            text-align: center;
+            em{
+                color: #FD7170;
+            }
+        }
+        a{
+            font-size: calc(.4 * (1.5rem + ((1vw - 3.2px) * 3)));
+            color: white;
+            background-color: #FD7170;
+            padding: calc(.4 * (1.5rem + ((1vw - 3.2px) * 3))) calc(.6 * (1.5rem + ((1vw - 3.2px) * 3)));
+            margin: 20px;
+        }
+    }
+`;
+
+export const Section = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1279px;
+    margin: 0 auto;
+    h1{
+        text-align: center;
+        margin: 40px 0;
+    }
+    section{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+`; 
+
+export const SubContainer = styled.div`
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 92%;
+    height: 270px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    .first{
+        display: flex;
+        margin: 0 0 1vw 2vw;
+        img{
+            width: 80px;
+            height: 80px;
+            border: 3px solid white; 
+        }
+        p{
+            margin: 0 0 0 1vw;
+        }
+    }
+    .second{
+        margin: 0 2vw 1vw 0;
+        p{
+            text-align: right;
+        }
+    }
+`;
+
+export const SubContainerText = styled.div`
+    width: 92%;
+    h3{
+        margin: 25px 0 5px;
+    }
+`;
+
+export const SubContainerWrap = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+`;
