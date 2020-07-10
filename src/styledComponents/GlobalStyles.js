@@ -184,14 +184,14 @@ export const ShowBox = styled.div`
 `;
 
 export const BodyX = styled.main`
-    background-color: lightgrey;
+    background-color: #eee;
     width: 100vw;
     .intro{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 5vw 20px;
+        padding: 5vmax 20px 5vw;
         &:before{
             content: ""
         }
@@ -208,16 +208,18 @@ export const BodyX = styled.main`
         img{
             width: 86vw;
             height: 210px;
-            border: 10px solid white;
+            border: 5px solid white;
             background-size: cover;
             margin: 20px 0;
+            @media (min-width: 480px){
+                height: 340px;
+            }
 
         }
         p{
-
+            width: 86vw;
         }
         .pixcomplement{
-            background-color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -228,14 +230,78 @@ export const BodyX = styled.main`
                 width: 12vw;
                 max-width: 60px;
             }
-            h1, h3{
+            h3{
                 margin: 40px 0;
 
             }
             div{
-                width: 50px;
+                width: 40px;
                 border: 1px solid black;
             }
+        }
+        @media (min-width: 740px){
+            margin: 0 0 10px;
+            height: 420px;
+            display: grid;
+            grid-template-areas:
+                "one one two two"
+                "one one two two"
+                "one one four four"
+                "one one four four";
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 100px);
+            gap: 10px 3vw;
+            img{
+                grid-area: one;
+                height: 40vw;
+                border: 10px solid white;
+                max-height:360px;
+                justify-self: end;
+                align-self: center;
+                margin: 0;
+            }
+            p{
+                grid-area: four;
+                justify-self: start;
+                font-size: calc(.35 * (1.5rem + ((1vw - 3.2px) * 3)));
+                line-height: calc(.5 * (1.5rem + ((1vw - 3.2px) * 3)));
+            }
+            .pixcomplement{
+                grid-area: two;
+                padding: 0;
+                justify-self: start;
+                align-items: flex-start;
+                margin: 50px 0 0;
+                svg{
+                    width: 6vw;
+                    max-width: 40px;
+                }
+                h3{
+                    margin: 40px 0;
+                    font-size: calc(.6 * (1.5rem + ((1vw - 3.2px) * 3)));
+                }
+            }
+            img, p, .pixcomplement{
+                width: 45vw;
+                max-width: 540px;
+            }
+            &:nth-child(3){
+                grid-template-areas:
+                "two two one one"
+                "two two one one"
+                "four four one one"
+                "four four one one";
+                img{
+                    justify-self: start;
+                }
+                .pixcomplement, p{
+                    justify-self: end;
+                    align-items: flex-end;
+                }                                       
+            }
+
+
+
         }
     }
 `;

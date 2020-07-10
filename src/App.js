@@ -9,7 +9,7 @@ const App = () => {
         <Header />
         <MainBanner />
         <MainBody />
-        <h1>Work in Progress, please check back </h1>
+        <h1 style={ {margin: "50px 0", textAlign: "center", color: "red"} }>Work in Progress, please check back... </h1>
         </>
     )
 }
