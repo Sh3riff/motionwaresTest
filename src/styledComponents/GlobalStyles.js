@@ -22,6 +22,10 @@ export const HeaderX = styled.header`
     height: 80px;
     width: 100vw;
     padding: 10px 3vw;
+    z-index: 10;
+    position: absolute;	
+    top: 0;	
+    left: 0;
     @media (min-width: 1020px){
         background-color: rgba(169,169,169, 0.5);
         color: white;
@@ -42,10 +46,9 @@ export const HeaderX = styled.header`
             align-items: center;
             width: 100vw;
             height: fit-content;
-            position: absolute;
+            position: fixed;
             left: 0;
             top: 80px;
-            z-index: 10;
             li{
                 background-color: ${props => props.init ? "transparent" : "white"};
                 height: 60px;
