@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7677ba8871445cf70c29144069ee779a",
+    "revision": "3b5419a3eb8274903c98de50ae3e7f19",
     "url": "/motionwaresTest/index.html"
   },
   {
-    "revision": "d45bd2da14bc3e70d21b",
-    "url": "/motionwaresTest/static/js/2.1e19b32a.chunk.js"
+    "revision": "1bb78fcfa4e7e6229f4a",
+    "url": "/motionwaresTest/static/js/2.bf57ed8d.chunk.js"
   },
   {
     "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/motionwaresTest/static/js/2.1e19b32a.chunk.js.LICENSE.txt"
+    "url": "/motionwaresTest/static/js/2.bf57ed8d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1fc8bd4ec0040783b3d6",
-    "url": "/motionwaresTest/static/js/main.76d4ddd0.chunk.js"
+    "revision": "c6da4b206fb315988083",
+    "url": "/motionwaresTest/static/js/main.11ebf97c.chunk.js"
   },
   {
     "revision": "a06c2490aee7b7898ddb",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "74c9244cd5af88e6d0fb94e9faa949a0",
     "url": "/motionwaresTest/static/media/BS4.74c9244c.jpg"
+  },
+  {
+    "revision": "84af96b493504d341bb25428b8623d06",
+    "url": "/motionwaresTest/static/media/C1.84af96b4.jpg"
   },
   {
     "revision": "d9932d6a44659e045efb670638def56c",

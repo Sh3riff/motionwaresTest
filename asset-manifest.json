@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.js": "/motionwaresTest/static/js/main.76d4ddd0.chunk.js",
-    "main.js.map": "/motionwaresTest/static/js/main.76d4ddd0.chunk.js.map",
+    "main.js": "/motionwaresTest/static/js/main.11ebf97c.chunk.js",
+    "main.js.map": "/motionwaresTest/static/js/main.11ebf97c.chunk.js.map",
     "runtime-main.js": "/motionwaresTest/static/js/runtime-main.c3012db8.js",
     "runtime-main.js.map": "/motionwaresTest/static/js/runtime-main.c3012db8.js.map",
-    "static/js/2.1e19b32a.chunk.js": "/motionwaresTest/static/js/2.1e19b32a.chunk.js",
-    "static/js/2.1e19b32a.chunk.js.map": "/motionwaresTest/static/js/2.1e19b32a.chunk.js.map",
+    "static/js/2.bf57ed8d.chunk.js": "/motionwaresTest/static/js/2.bf57ed8d.chunk.js",
+    "static/js/2.bf57ed8d.chunk.js.map": "/motionwaresTest/static/js/2.bf57ed8d.chunk.js.map",
     "index.html": "/motionwaresTest/index.html",
-    "precache-manifest.2d4f07227b43750b3bafd31519e7f66e.js": "/motionwaresTest/precache-manifest.2d4f07227b43750b3bafd31519e7f66e.js",
+    "precache-manifest.927456f40ec885571136ca4316e30159.js": "/motionwaresTest/precache-manifest.927456f40ec885571136ca4316e30159.js",
     "service-worker.js": "/motionwaresTest/service-worker.js",
-    "static/js/2.1e19b32a.chunk.js.LICENSE.txt": "/motionwaresTest/static/js/2.1e19b32a.chunk.js.LICENSE.txt",
+    "static/js/2.bf57ed8d.chunk.js.LICENSE.txt": "/motionwaresTest/static/js/2.bf57ed8d.chunk.js.LICENSE.txt",
     "static/media/A1.jpg": "/motionwaresTest/static/media/A1.5893948e.jpg",
     "static/media/A2.jpg": "/motionwaresTest/static/media/A2.7db38f77.jpg",
     "static/media/BS2.jpg": "/motionwaresTest/static/media/BS2.57721ca6.jpg",
     "static/media/BS4.jpg": "/motionwaresTest/static/media/BS4.74c9244c.jpg",
+    "static/media/C1.jpg": "/motionwaresTest/static/media/C1.84af96b4.jpg",
     "static/media/Pro5.jpg": "/motionwaresTest/static/media/Pro5.d9932d6a.jpg",
     "static/media/Pro6.jpg": "/motionwaresTest/static/media/Pro6.c5a77832.jpg",
     "static/media/yoga.mp4": "/motionwaresTest/static/media/yoga.cc13a9fa.mp4"
   },
   "entrypoints": [
     "static/js/runtime-main.c3012db8.js",
-    "static/js/2.1e19b32a.chunk.js",
-    "static/js/main.76d4ddd0.chunk.js"
+    "static/js/2.bf57ed8d.chunk.js",
+    "static/js/main.11ebf97c.chunk.js"
   ]
 }
