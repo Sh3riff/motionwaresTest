@@ -1,26 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const HeaderHelper = ({ styler, setStyle }) => {
+
+const HeaderHelper = ({ setStyle }) => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const menuIconSetter = () => setIsMenuOpen(!isMenuOpen)
     return (
         <>
-            <nav>
-                <svg fill="currentColor" viewBox="0 0 20 20" onClick={setStyle}>
-                    { (styler === "init") 
-                        ?
-                        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                        :
-                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            <nav>                
+                <svg stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" onClick={ () => { setStyle(); menuIconSetter() } }>
+                    {(!isMenuOpen)
+                    ?
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    :
+                    <path d="M6 18L18 6M6 6l12 12"></path>
                     }
                 </svg>
-
                 <ul className="menuContainer">                    
-                    <li><a href="#">PRACTICE</a></li>
-                    <li><a href="#">PROGRAMS</a></li>
-                    <li><a href="#">TEACHERS</a></li>
-                    <li><a href="#">ARTICLES</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SIGNUP</a></li>
-                    <li><a href="#">LOGIN</a></li>
+                    <li><a className="navlist" href="#">PRACTICE</a></li>
+                    <li><a className="navlist" href="#">PROGRAMS</a></li>
+                    <li><a className="navlist" href="#">TEACHERS</a></li>
+                    <li><a className="navlist" href="#">ARTICLES</a></li>
+                    <li><a className="navlist" href="#">ABOUT</a></li>
+                    <li><a className="navlist" href="#">SIGNUP</a></li> 
+                    <li><a className="navlist" href="#">LOGIN</a></li>
                 </ul>
             </nav>
             <div className="cluster">
@@ -33,9 +35,9 @@ const HeaderHelper = ({ styler, setStyle }) => {
                 <span>THE HOUSE OF YOGA</span>
             </div>
             <div className="others">
-                <span><a href="#"></a>Login</span>
+                <span><a href="#" className="others"></a>Login</span>
                 <span>/</span>
-                <span><a href="#"></a>Pricing</span>
+                <span><a href="#" className="others"></a>Pricing</span>
                 <span>/</span>
                 <svg fill="currentColor" viewBox="0 0 20 20" width="22px">
                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>

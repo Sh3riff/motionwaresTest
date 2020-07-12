@@ -14,7 +14,7 @@ export default createGlobalStyle`
 `;
 
 export const HeaderX = styled.header`
-    background-color: ${props => props.init ? "rgba(169,169,169, 0.5)" : "white"};
+    background-color: ${props => props.init ? "rgba(169,169,169,0.5)" : "white"};
     color: ${props => props.init ? "white" : "black"};
     display: flex;
     justify-content: space-between;
@@ -22,10 +22,6 @@ export const HeaderX = styled.header`
     height: 80px;
     width: 100vw;
     padding: 10px 3vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
     @media (min-width: 1020px){
         background-color: rgba(169,169,169, 0.5);
         color: white;
@@ -39,21 +35,25 @@ export const HeaderX = styled.header`
         }        
         ul{
             display: ${props => props.init ? "none" : "flex"};
+            border-top: 1px solid rgba(169,169,169, 1);
+            border-bottom: 1px solid rgba(169,169,169, 1);
             flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 100vw;
+            height: fit-content;
             position: absolute;
             left: 0;
-            top: 100px;
+            top: 80px;
+            z-index: 10;
             li{
                 background-color: ${props => props.init ? "transparent" : "white"};
+                height: 60px;
                 width: 100%;
-                margin: 1px 0;
                 padding: 25px 0;
                 text-align: center;
                 a{
-                    color: ${props => props.init ? "white" : "black"};;
+                    color: ${props => props.init ? "white" : "black"};
                 }
             }
         }
@@ -70,6 +70,7 @@ export const HeaderX = styled.header`
                 align-items: space-between;
                 position: static;
                 width: fit-content;
+                border: 0px;
                 li{
                     height: 100%;
                     width: auto;
@@ -91,7 +92,9 @@ export const HeaderX = styled.header`
             justify-content: center;
             margin: 0 0 5px;
             svg{
-                fill: ${props => props.init ? "white" : "black"};
+                stroke: ${props => props.init ? "white" : "black"};
+                stroke-width: 1px;
+                fill: none;
                 width: 7vw;
                 max-width: 25px;
                 margin: 0 2px;
@@ -137,7 +140,6 @@ export const ShowBox = styled.div`
     .textOver{
         height: 480px;
         width: 100vw;
-        z-index: 2;
         position: absolute;
         top: 0;
         right: 0;
@@ -226,7 +228,8 @@ export const BodyX = styled.main`
             align-items: center;
             padding: 20px 0;
             svg{
-                fill: black;
+                fill: none;
+                stroke-width: 1px;
                 width: 12vw;
                 max-width: 60px;
             }
@@ -311,12 +314,13 @@ export const Board = styled.div`
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 520px;
+    min-height: 520px;
+    padding: 100px 0 0;
     @media (min-width: 740px){
-        height: 550px;
+        min-height: 550px;
     }
-    .texty{
-        height: 100%;
+    div.texty{
+        height: fit-content;
         width: 100vw;
         z-index: 2;
         display: flex;
@@ -327,7 +331,7 @@ export const Board = styled.div`
         font-weight: normal;
         h1{
             font-size: calc(.85 * (1.5rem + ((1vw - 3.2px) * 3)));
-            margin-bottom: 3vh;
+            margin: 0 0 3vh;
             text-align: center;
         }
         h3{
@@ -346,6 +350,73 @@ export const Board = styled.div`
             padding: calc(.4 * (1.5rem + ((1vw - 3.2px) * 3))) calc(.6 * (1.5rem + ((1vw - 3.2px) * 3)));
             margin: 20px;
         }
+        div.iconers{
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            margin: 20px 0;
+            div{
+                width: 200px;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                svg{
+                    width: 50px;
+                    stroke-width: 1px;
+                    margin: 0 0 25px;
+                }
+                p{
+                    font-weight: bold;
+                    position: relative;
+                    top: -15px;
+                }
+            }
+            @media (max-width: 640px){
+                div:nth-child(n+2){
+                    display: none;
+                }
+            }
+        }
+        div.dummyform{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+            height: 60px;
+            input[type=text]{
+                background-color: transparent;
+                color: white;
+                height: 56px;
+                width: 215px;
+                font-size: 20px;
+                padding: 0 15px;
+                &::placeholder{
+                    color: white;
+                }
+                @media (min-width: 640px){
+                    width: 280px;
+                }
+            }
+            span{
+                height: 56px;
+                width: 56px;
+                padding: 1px 6px;
+                background-color: white;
+                border: none;
+                cursor: pointer;
+                svg{
+                    stroke: black;
+                    width: 30px;
+                    margin: 12.5px 0 0 7.5px;
+                    &:hover{
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
     }
 `;
 
@@ -353,17 +424,74 @@ export const Section = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1279px;
     margin: 0 auto;
+    @media (min-width: 640px){
+        max-width: 750px;
+    }
+    @media (min-width: 1020px){
+        max-width: 1279px;
+    }
     h1{
         text-align: center;
         margin: 40px 0;
     }
     section{
+        overflow: hidden;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         grid-template-rows: auto;
         justify-content: center;
+    }
+    section.twolines{
+        @media (max-width: 1019px){
+            div:nth-of-type(n+5){
+                display: none;
+            }
+        }
+        @media (max-width: 639px){
+            div:nth-of-type(n+3){
+                display: none;
+            }
+        }
+    }   
+    section.oneline{
+        @media (max-width: 1019px){
+            div:nth-of-type(n+3){
+                display: none;
+            }
+        }
+        @media (max-width: 639px){
+            div:nth-of-type(n+2){
+                display: none;
+            }
+        }
+    }   
+
+    div.newplus{
+        position: relative;
+        margin: 20px auto;
+        background-color: skyblue;
+        height: 40px;
+        width: 92%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            color: white;
+        }
+        svg{
+            width: 20px;
+            stroke: white;
+            position: absolute;
+            right: 15px;
+        }
+        @media (min-width: 480px){
+            width: fit-content;
+            margin: 20px 40px 20px auto;
+            a{
+                margin: 0 55px 0 25px;
+            }
+        }
     }
 `; 
 
@@ -372,11 +500,14 @@ export const SubContainer = styled.div`
     background-size: cover;
     background-position: center;
     width: 92%;
-    height: 270px;
+    height: 65vw;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     color: white;
+    @media (min-width: 640px){
+        height: 270px;
+    }
     .first{
         display: flex;
         margin: 0 0 1vw 2vw;
@@ -401,13 +532,15 @@ export const SubContainerText = styled.div`
     width: 92%;
     h3{
         margin: 25px 0 5px;
+        em{
+            color: skyblue;
+        }
     }
 `;
 
 export const SubContainerWrap = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: 15px 0;
 `;

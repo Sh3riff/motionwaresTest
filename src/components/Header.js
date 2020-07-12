@@ -10,10 +10,10 @@ const Header = () => {
         <>
          { (!isNavOpen) ? 
             <HeaderX init>
-                <HeaderHelper styler="init" setStyle = {setNavState}  />
+                <HeaderHelper setStyle = {setNavState}  />
             </ HeaderX> :
             <HeaderX>
-                <HeaderHelper styler="init" setStyle = {setNavState}  />
+                <HeaderHelper setStyle = {setNavState}  />
             </ HeaderX>
         }
         </>
